@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Navbar from './components/Navbar';
-import image from '../src/assets/Vector.svg'
 
 const App = () => {
   const backgroundStyle = {
