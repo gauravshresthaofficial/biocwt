@@ -11,7 +11,6 @@ import imagemiddle from '../assets/imagemiddle.svg'
 import cross from '../assets/icons/maki_cross.svg';
 import tick from '../assets/icons/twemoji_check-mark.svg';
 import { RxCross2 } from "react-icons/rx";
-import vector from '../assets/vector.svg'
 import group9 from '../assets/Group9.svg'
 
 import { PiLessThanBold } from "react-icons/pi";
