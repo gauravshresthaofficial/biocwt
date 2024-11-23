@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 
 const App = () => {
   const backgroundStyle = {
-    backgroundImage: "url('../src/assets/Vector.svg')",
+    backgroundImage: "url('../src/assets/Group9.svg')",
     backgroundRepeat: 'no-repeat', // Prevents repeating the image
   };
 

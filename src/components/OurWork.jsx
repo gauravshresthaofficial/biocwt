@@ -25,7 +25,7 @@ const OurWork = ({ padding }) => {
     return (
         <section className='max-h-screen'>
             <div
-                className={`h-full bg-red-300 w-screen flex flex-col justify-center text-white gap-10 pt-${padding}`}
+                className={`h-full w-screen flex flex-col justify-center text-white gap-10 pt-${padding}`}
             >
                 <div className="ml-[10vw] mt-[12vh]">
                     <h2 className='capitalize text-[8vh] font-bold leading-tight pl-12'>Our Work</h2>
