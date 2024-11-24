@@ -5,6 +5,7 @@ import Gallery from './pages/Gallery'
 import Navbar from './components/Navbar';
 import Contact from './pages/Contact';
 import AboutUsPage from './pages/AboutUsPage';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   const backgroundStyle = {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/aboutUs" element={<AboutUsPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div >
   )

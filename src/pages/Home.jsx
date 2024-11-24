@@ -86,9 +86,7 @@ const Home = () => {
         <>
             {/* <img src={group9} alt="" className='absolute right-0 top-0 scrollbar-hide' /> */}
             <section className='h-screen w-screen relative flex justify-center items-center'>
-                <div className="w-[50vw] h-full absolute bg-hero-pattern bg-cover top-0 left-0">
-
-                </div>
+                <div className="w-[50vw] h-full absolute bg-hero-pattern bg-cover top-0 left-0" loading="lazy"></div>
 
                 <div className='h-[70vh] w-[90vw] divide-x-2 divide-[#FFC099]  ml-[10vw] bg-[#1E0C06] rounded-tl-3xl rounded-bl-3xl z-10 mt-20 flex flex-row flex-grow'>
                     <div className="w-[50%] h-full p-12 flex flex-col justify-around">
@@ -112,9 +110,9 @@ const Home = () => {
                     <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
                     <div className="w-[50%] h-full relative">
-                        <img src={hero2} alt="Hero 2" className='h-44 absolute top-10 right-32 object-cover' />
-                        <img src={hero1} alt="Hero 1" className='h-44 absolute bottom-40 left-32 object-cover' />
-                        <img src={hero3} alt="Hero 3" className='h-44 absolute bottom-10 right-32 object-cover' />
+                        <img src={hero2} alt="Hero 2" className='h-44 absolute top-10 right-32 object-cover' loading='lazy'/>
+                        <img src={hero1} alt="Hero 1" className='h-44 absolute bottom-40 left-32 object-cover' loading='lazy'/>
+                        <img src={hero3} alt="Hero 3" className='h-44 absolute bottom-10 right-32 object-cover' loading='lazy'/>
 
                     </div>
 

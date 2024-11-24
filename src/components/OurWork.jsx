@@ -4,7 +4,7 @@ import hero2 from '../assets/image-2.svg'
 import hero3 from '../assets/image.svg'
 import workimage from '../assets/workimage.svg'
 import arrow from '../assets/icons/arrow.svg'
-import { FaArrowLeft, FaArrowRight, FaRegCircle } from "react-icons/fa6";
+import { FaRegCircle } from "react-icons/fa6";
 import { MdCircle } from 'react-icons/md'
 
 const images = [workimage, hero1, hero2, hero3];
@@ -36,7 +36,7 @@ const OurWork = ({ padding }) => {
                             className='text-lg hover:text-[#FFC099] hover:scale-110 h-8 duration-75 cursor-pointer'
                             onClick={handlePrev}
                         />
-                        <img src={images[currentIndex]} alt="Work" className='h-[65vh]' />
+                        <img src={images[currentIndex]} alt="Work" className='h-[65vh] w-[60vw] object-cover rounded-3xl'  loading='lazy'/>
                         <img src={arrow}
                             className='text-lg hover:text-[#FFC099] hover:scale-110 h-8 rotate-180 duration-75 cursor-pointer'
                             onClick={handleNext}

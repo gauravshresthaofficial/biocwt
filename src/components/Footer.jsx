@@ -16,9 +16,15 @@ const Footer = () => {
                 <p className='flex items-center'><IoLocationOutline className='inline-block mr-3 w-6 h-6' />Na Plzeňce 1166/0
                     150 00</p>
             </div>
-            <p>
-                Privacy Policy
-            </p>
+            <div className='flex gap-20 text-sm'>
+                <p>
+                    Privacy Policy
+                </p>
+
+                <p>This design is not own by me. <a href="https://www.figma.com/design/Cr69eIm21YYC7dlRuwNuEL/wood-product-services-website-(Community)?node-id=0-1&node-type=canvas&t=Vqx34Xij3E6EYuj2-0"
+                    className='text-yellow-700 underline-offset-4 underline hover:scale-110 hover:text-yellow-500'>View Design in Figma</a>
+                </p>
+            </div>
         </div>
     )
 }

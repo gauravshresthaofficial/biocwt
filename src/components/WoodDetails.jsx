@@ -1,5 +1,7 @@
 import React from 'react'
-import hero1 from '../assets/image-1.svg'
+import wood1 from '../assets/wood1.svg'
+import wood2 from '../assets/wood2.svg'
+import wood3 from '../assets/wood3.svg'
 import { GiCheckMark } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
@@ -7,7 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 const cardData = [
     {
         title: "Oak",
-        image: hero1,
+        image: wood1,
         features: [
             { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
             { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Beautiful Texture" },
@@ -16,14 +18,14 @@ const cardData = [
     },
     {
         title: "Buk",
-        image: hero1,
+        image: wood3,
         features: [
             { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
             { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },],
     },
     {
         title: "Ash",
-        image: hero1,
+        image: wood2,
         features: [
             { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
             { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },],
@@ -32,7 +34,7 @@ const cardData = [
 
 const Card = ({ title, image, features }) => (
     <div className="max-w-[20vw] flex flex-col items-center gap-6">
-        <img src={image} alt={title} className='h-44' />
+        <img src={image} alt={title} className='h-44' loading='lazy'/>
         <p className='font-semibold text-lg leading-none'>{title}</p>
         <div className="flex gap-3 flex-col justify-start w-full px-4">
             {features.map((feature, index) =>
