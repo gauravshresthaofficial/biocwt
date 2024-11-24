@@ -5,8 +5,8 @@ import AnyQuestions from '../components/AnyQuestions'
 
 const AboutUsPage = () => {
   return (
-    <div>
-      <AboutUs padding={16}/>
+    <div className='pt-16'>
+      <AboutUs/>
       <OurWork/>
       <AnyQuestions/>
     </div>

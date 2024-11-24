@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound';
 
 const App = () => {
   const backgroundStyle = {
-    backgroundImage: "url('../src/assets/Group9.svg')",
+    backgroundImage: "url('/Group9.svg')",
     backgroundRepeat: 'no-repeat', // Prevents repeating the image
   };
 
