@@ -1,9 +1,8 @@
 import React from 'react'
-import logo from "../assets/logo.svg"
 import imagemiddle from '../assets/imagemiddle.svg'
 
-import { FiPhoneCall } from 'react-icons/fi'
-import { IoLocationOutline, IoLocationSharp } from 'react-icons/io5'
+
+import Footer from './Footer'
 
 const AnyQuestions = () => {
     return (
@@ -36,7 +35,7 @@ const AnyQuestions = () => {
                     <img src={imagemiddle} alt="" className='absolute right-24 -bottom-56 h-[30rem]' />
                 </div>
 
-                <div className='flex flex-col gap-10 px-20 py-10 text-white text-lg'
+                {/* <div className='flex flex-col gap-10 px-20 py-10 text-white text-lg'
                     style={{
                         boxShadow: "0 -4px 30px rgba(255, 255, 255, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.1)"
                     }} >
@@ -49,7 +48,8 @@ const AnyQuestions = () => {
                     <p>
                         Privacy Policy
                     </p>
-                </div>
+                </div> */}
+                <Footer/>
 
             </div>
         </section>

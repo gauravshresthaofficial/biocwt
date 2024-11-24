@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Navbar from './components/Navbar';
+import Contact from './pages/Contact';
+import AboutUsPage from './pages/AboutUsPage';
 
 const App = () => {
   const backgroundStyle = {
@@ -16,6 +18,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/aboutUs" element={<AboutUsPage />} />
       </Routes>
     </div >
   )
