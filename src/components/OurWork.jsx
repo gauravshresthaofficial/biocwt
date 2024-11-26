@@ -1,25 +1,28 @@
-import React, { useState } from 'react'
-import hero1 from '../assets/image-1.svg'
-import hero2 from '../assets/image-2.svg'
-import hero3 from '../assets/image.svg'
-import workimage from '../assets/workimage.svg'
-import arrow from '../assets/icons/arrow.svg'
+import React, { useContext, useState } from 'react'
+import { ImageContext } from '../context/ImageContext';
+// import hero1 from '../assets/image-1.svg'
+// import hero2 from '../assets/image-2.svg'
+// import hero3 from '../assets/image.svg'
+// import workimage from '../assets/workimage.svg'
+// import arrow from '../assets/icons/arrow.svg'
 import { FaRegCircle } from "react-icons/fa6";
 import { MdCircle } from 'react-icons/md'
 
-const images = [workimage, hero1, hero2, hero3];
 
 const OurWork = ({ padding }) => {
+
+    const { images } = useContext(ImageContext)
+    const photos = [images.workimage, images.hero1, images.hero2, images.hero3];
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? photos.length - 1 : prevIndex - 1));
     };
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === photos.length - 1 ? 0 : prevIndex + 1));
     };
 
     return (
@@ -32,18 +35,18 @@ const OurWork = ({ padding }) => {
                 </div>
                 <div className='grow flex gap-4 flex-col'>
                     <div className='flex gap-10 items-center justify-center'>
-                        <img src={arrow}
+                        <img src={images.arrow}
                             className='text-lg hover:text-[#FFC099] hover:scale-110 h-8 duration-75 cursor-pointer'
                             onClick={handlePrev}
                         />
-                        <img src={images[currentIndex]} alt="Work" className='h-[65vh] w-[60vw] object-cover rounded-3xl'  loading='lazy'/>
-                        <img src={arrow}
+                        <img src={photos[currentIndex]} alt="Work" className='h-[65vh] w-[60vw] object-cover rounded-3xl' loading='lazy' />
+                        <img src={images.arrow}
                             className='text-lg hover:text-[#FFC099] hover:scale-110 h-8 rotate-180 duration-75 cursor-pointer'
                             onClick={handleNext}
                         />
                     </div>
                     <div className='h-10 flex justify-center gap-3 items-center'>
-                        {images.map((_, index) => (
+                        {photos.map((_, index) => (
                             index === currentIndex ? (
                                 <MdCircle key={index} className='text-white h-3' />
                             ) : (

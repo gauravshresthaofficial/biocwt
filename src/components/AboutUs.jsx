@@ -1,9 +1,16 @@
-import React from 'react'
-import work1 from '../assets/work1.svg'
-import work2 from '../assets/work2.svg'
-import work3 from '../assets/work3.svg'
+import React, { useContext } from 'react'
+import { ImageContext } from '../context/ImageContext';
+
+
+
+// import work1 from '../assets/work1.svg'
+// import work2 from '../assets/work2.svg'
+// import work3 from '../assets/work3.svg'
 
 const AboutUs = ({ padding = 0 }) => {
+
+    const { images} = useContext(ImageContext);
+
     return (
         <section className={`h-screen pt-${padding}`}>
             <div className="h-full w-screen flex flex-col justify-center text-white gap-10 relative">
@@ -15,9 +22,9 @@ const AboutUs = ({ padding = 0 }) => {
                                 BIO CWT</span> - We manufacture solid wood products according to individual drawings. We make chairs, armchairs, wardrobes, beds and much more in our own workshop, equipped with all the necessary industrial equipment.</p>
                     </div>
 
-                    <img src={work1} alt="" className='absolute h-36 top-12 right-24' />
-                    <img src={work2} alt="" className='absolute h-52 top-24 right-36 z-10 border-[12px] rounded-[28px] border-[#1E0C06]' />
-                    <img src={work3} alt="" className='absolute h-36 bottom-12 right-24' />
+                    <img src={images.work1} alt="" className='absolute h-36 top-12 right-24' />
+                    <img src={images.work2} alt="" className='absolute h-52 top-24 right-36 z-10 border-[12px] rounded-[28px] border-[#1E0C06]' />
+                    <img src={images.work3} alt="" className='absolute h-36 bottom-12 right-24' />
                 </div>
             </div>
         </section>

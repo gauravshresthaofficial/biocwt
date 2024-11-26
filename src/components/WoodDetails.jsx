@@ -1,53 +1,55 @@
-import React from 'react'
-import wood1 from '../assets/wood1.svg'
-import wood2 from '../assets/wood2.svg'
-import wood3 from '../assets/wood3.svg'
+import React, { useContext } from 'react';
+import { ImageContext } from '../context/ImageContext';
 import { GiCheckMark } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
-
-
-const cardData = [
-    {
-        title: "Oak",
-        image: wood1,
-        features: [
-            { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
-            { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Beautiful Texture" },
-            { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Water Resistance" },
-            { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Expensive" },],
-    },
-    {
-        title: "Buk",
-        image: wood3,
-        features: [
-            { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
-            { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },],
-    },
-    {
-        title: "Ash",
-        image: wood2,
-        features: [
-            { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
-            { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },],
-    },];
-
 
 const Card = ({ title, image, features }) => (
     <div className="max-w-[20vw] flex flex-col items-center gap-6">
         <img src={image} alt={title} className='h-44' loading='lazy'/>
         <p className='font-semibold text-lg leading-none'>{title}</p>
         <div className="flex gap-3 flex-col justify-start w-full px-4">
-            {features.map((feature, index) =>
-            (<div key={index} className='flex items-center gap-3'>
-                {feature.icon}
-                <p className='inline'>{feature.text}</p>
-            </div>
+            {features.map((feature, index) => (
+                <div key={index} className='flex items-center gap-3'>
+                    {feature.icon}
+                    <p className='inline'>{feature.text}</p>
+                </div>
             ))}
         </div>
-    </div>);
-
+    </div>
+);
 
 const WoodDetails = () => {
+    const { images } = useContext(ImageContext);
+
+    const cardData = [
+        {
+            title: "Oak",
+            image: images.wood1,
+            features: [
+                { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
+                { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Beautiful Texture" },
+                { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Water Resistance" },
+                { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Expensive" },
+            ],
+        },
+        {
+            title: "Buk",
+            image: images.wood3,
+            features: [
+                { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
+                { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },
+            ],
+        },
+        {
+            title: "Ash",
+            image: images.wood2,
+            features: [
+                { icon: <GiCheckMark className='text-[#FFC099] w-4' />, text: "Durability" },
+                { icon: <RxCross2 className='text-[#FFC099] w-4' />, text: "Hard to handle" },
+            ],
+        },
+    ];
+
     return (
         <section>
             <div className="h-screen w-screen flex flex-col flex-grow justify-center text-white gap-10">
@@ -56,10 +58,14 @@ const WoodDetails = () => {
                     <h2 className='capitalize text-[8vh] font-bold leading-tight pl-12'>Work with</h2>
                 </div>
 
-                <div className='flex w-full justify-around grow'> {cardData.map((card, index) => (<Card key={index} {...card} />))} </div>
+                <div className='flex w-full justify-around grow'>
+                    {cardData.map((card, index) => (
+                        <Card key={index} {...card} />
+                    ))}
+                </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default WoodDetails
+export default WoodDetails;

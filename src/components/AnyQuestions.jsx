@@ -1,10 +1,12 @@
-import React from 'react'
-import imagemiddle from '../assets/imagemiddle.svg'
+import React, { useContext } from 'react'
+import { ImageContext } from '../context/ImageContext'
+// import imagemiddle from '../assets/imagemiddle.svg'
 
 
 import Footer from './Footer'
 
 const AnyQuestions = () => {
+    const {images} = useContext(ImageContext)
     return (
         <section>
             <div className="w-screen flex flex-col justify-center text-white overflow-hidden relative">
@@ -32,7 +34,7 @@ const AnyQuestions = () => {
                         <p className='font-medium'>Write to us and we will be sure to answer all your questions and give you a comprehensive consultation.</p>
                     </div>
 
-                    <img src={imagemiddle} alt="" className='absolute right-24 -bottom-56 h-[30rem]' />
+                    <img src={images.imagemiddle} alt="" className='absolute right-24 -bottom-56 h-[30rem]' />
                 </div>
 
                 {/* <div className='flex flex-col gap-10 px-20 py-10 text-white text-lg'
