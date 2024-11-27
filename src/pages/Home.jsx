@@ -14,6 +14,7 @@ import AboutUs from '../components/AboutUs';
 import AdvantageWorkWithUs from '../components/AdvantageWorkWithUs';
 import OurWork from '../components/OurWork';
 import WoodDetails from '../components/WoodDetails';
+import Navbar from '../components/Navbar';
 
 
 const Home = () => {

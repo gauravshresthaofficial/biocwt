@@ -34,7 +34,7 @@ const App = () => {
         className='overflow-x-hidden bg-[#222021] min-h-screen max-w-screen bg-cover bg-center'
         style={backgroundStyle}
       >
-        <Navbar />
+                    <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
