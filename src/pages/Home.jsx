@@ -14,7 +14,6 @@ import AboutUs from '../components/AboutUs';
 import AdvantageWorkWithUs from '../components/AdvantageWorkWithUs';
 import OurWork from '../components/OurWork';
 import WoodDetails from '../components/WoodDetails';
-import Navbar from '../components/Navbar';
 
 
 const Home = () => {
@@ -32,8 +31,8 @@ const Home = () => {
         // Background image animation
         tl.fromTo(
             bgimage.current,
-            { x: '-100%', opacity: 0 },
-            { x: '0%', opacity: 1 }
+            { opacity: 0 },
+            { opacity: 1 }
         )
 
             .fromTo(
