@@ -1,20 +1,20 @@
 import React, { createContext, useState, useEffect } from 'react';
 
 // Import all images explicitly
-import work1 from '../assets/work1.svg';
-import work2 from '../assets/work2.svg';
-import work3 from '../assets/work3.svg';
+import work1 from '../assets/work1.webp';
+import work2 from '../assets/work2.webp';
+import work3 from '../assets/work3.webp';
 import background from '../assets/Group9.svg';
-import workimage from '../assets/workimage.svg';
+import workimage from '../assets/workimage.webp';
 import imagemiddle from '../assets/imagemiddle.svg';
-import logo from "../assets/logo.svg";
-import hero1 from '../assets/image-1.svg';
-import hero2 from '../assets/image-2.svg';
-import hero3 from '../assets/image.svg';
+import logo from "../assets/logo.webp";
+import hero1 from '../assets/image-1.webp';
+import hero2 from '../assets/image-2.webp';
+import hero3 from '../assets/image.webp';
 import arrow from '../assets/icons/arrow.svg';
-import wood1 from '../assets/wood1.svg';
-import wood2 from '../assets/wood2.svg';
-import wood3 from '../assets/wood3.svg';
+import wood1 from '../assets/wood1.webp';
+import wood2 from '../assets/wood2.webp';
+import wood3 from '../assets/wood3.webp';
 
 export const ImageContext = createContext();
 
